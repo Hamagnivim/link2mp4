@@ -1,4 +1,10 @@
 from .capture import requests, video
-def download(): # TODO: implement
-    id = input('Enter Reddit video ID')
-    return video(video=None, audio=None) # returns a video from a video url and an **optional** audio url
+def download():
+    id = input('https://www.reddit.com/r/')
+    req = requests('https://www.reddit.com/r/%s' % id)
+    vid = max(filter(lambda req: '.mp4' in req, req))
+    try:
+        aud = list(filter(lambda req: '_audio.mp4' in req, req))[0]
+    except IndexError:
+        aud = None
+    return video(vid, aud)

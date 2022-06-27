@@ -3,9 +3,9 @@ from tkinter.filedialog import asksaveasfilename
 from questionary import select
 from os import remove
 try:
-    from link2mp4 import download_functions
+    from . import download_functions
 except ImportError:
-    from __init__ import download_functions
+    from link2mp4 import download_functions
 def main():
     Tk().withdraw()
     website = select("Choose source website", download_functions.keys()).ask()

@@ -8,7 +8,7 @@ def requests(url):
     driver.get(url)
     requests = driver.requests
     driver.quit()
-    return requests
+    return list(map(lambda req: req.url, requests))
 def video(video, audio=None):
     if audio is None:
         return VideoFileClip(video)
