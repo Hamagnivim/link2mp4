@@ -14,9 +14,8 @@ for browser in browsers:
         options.headless = True
         browsers[browser](options=options)
     except:
-        pass
-    else:
-        break
+        continue
+    break
 def requests(url):
     driver = browsers[browser](options=options)
     driver.get(url)

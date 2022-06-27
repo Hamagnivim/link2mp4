@@ -5,7 +5,7 @@ from os import remove
 try:
     from . import download_functions
 except ImportError:
-    from link2mp4 import download_functions
+    from __init__ import download_functions
 def main():
     Tk().withdraw()
     website = select("Choose source website", download_functions.keys()).ask()

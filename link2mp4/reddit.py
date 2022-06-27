@@ -1,4 +1,7 @@
-from .capture import requests, video
+try:
+    from .capture import requests, video
+except ImportError:
+    from capture import requests, video
 def download():
     id = input('https://www.reddit.com/r/')
     req = requests('https://www.reddit.com/r/%s' % id)
