@@ -16,6 +16,8 @@ for browser in browsers:
     except:
         continue
     break
+else:
+    raise Exception("No browser found")
 def requests(url):
     driver = browsers[browser](options=options)
     driver.get(url)
