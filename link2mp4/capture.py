@@ -18,7 +18,7 @@ for browser in browsers:
         continue
     break
 else:
-    raise Exception("No browser found")
+    raise Exception("No browser found, please install geckodriver")
 def requests(url):
     driver = browsers[browser](options=options)
     driver.get(url)

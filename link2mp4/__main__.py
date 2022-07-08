@@ -8,8 +8,8 @@ except ImportError:
     from __init__ import download_functions
 def main():
     Tk().withdraw()
-    website = select("Choose source website", download_functions.keys()).ask()
     outname = asksaveasfilename(filetypes = [("MP4 file", "*.mp4")])
+    website = select("Choose source website", download_functions.keys()).ask()
     if outname == '':
         return
     if not outname.endswith('.mp4'):
