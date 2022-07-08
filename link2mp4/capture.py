@@ -1,5 +1,6 @@
 from moviepy.editor import VideoFileClip, AudioFileClip
 from seleniumwire.webdriver import Firefox, Chrome, Edge, Safari
+DEBUG = False # change to make the browser visible for debugging
 Options = lambda: None # noqa
 browsers = {
     'firefox': Firefox,
@@ -11,7 +12,7 @@ for browser in browsers:
     try:
         exec("from selenium.webdriver.%s.webdriver import Options" % browser)
         options = Options()
-        options.headless = True
+        options.headless = not DEBUG
         browsers[browser](options=options)
     except:
         continue
