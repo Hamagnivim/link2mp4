@@ -4,3 +4,4 @@ link2mp4.egg-info
 */__pycache__
 *.log
 *.mp4
+*.exe

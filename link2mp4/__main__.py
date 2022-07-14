@@ -15,7 +15,12 @@ def main():
     if not outname.endswith('.mp4'):
         outname += '.mp4'
     try:
-        download_functions[website]().write_videofile(outname)
+        video = download_functions[website]()
+        if isinstance(video, bytes):
+            with open(outname, 'wb') as f:
+                f.write(video)
+        else:
+            video.write_videofile(outname)
     except KeyError:
         print('Google popped up a captcha. Try again later.')
     except KeyboardInterrupt:
