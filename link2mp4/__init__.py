@@ -5,7 +5,7 @@ except ImportError:
 download_functions = {
     'YouTube': youtube.download,
     'Reddit': reddit.download,
-    'Twitter (On progress)': twitter.download,
+    'Twitter': twitter.download,
     'Pinterest': pinterest.download,
     'TikTok': tiktok.download
 }

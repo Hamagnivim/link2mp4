@@ -16,7 +16,7 @@ setup(
     },
     python_requires='>=3.0',
     packages=find_packages(),
-    install_requires=['selenium>=4.1.0', 'selenium-wire>=4.6.4', 'moviepy>=1.0.3', 'questionary>=1.10.0'],
+    install_requires=['selenium>=4.1.0', 'selenium-wire>=4.6.4', 'moviepy>=1.0.3', 'questionary>=1.10.0', 'requests>=2.28.1', 'm3u8>=2.0.0'],
     classifiers=['Programming Language :: Python :: 3'],
     entry_points={ 'console_scripts': [ 'link2mp4=link2mp4.__main__:main' ] }
 )
