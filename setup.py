@@ -9,6 +9,7 @@ setup(
     long_description=open('README.md').read(),
     long_description_content_type="text/markdown",
     url='https://github.com/Hamagnivim/link2mp4',
+    platforms="any",
     project_urls={
         'Documentation': 'https://github.com/Hamagnivim/link2mp4#readme',
         'Bug Reports': 'https://github.com/Hamagnivim/link2mp4/issues',
