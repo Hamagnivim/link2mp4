@@ -2,6 +2,16 @@
 
 Download videos as MP4 files
 
+## Supported sites
+
+- YouTube
+- Reddit
+- Twitter
+- Pinterest
+- TikTok
+- Vimeo
+- Twitch
+
 ## Get geckodriver
 
 ### Linux (Debian)
