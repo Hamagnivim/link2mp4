@@ -11,6 +11,7 @@ Download videos as MP4 files
 - TikTok
 - Vimeo
 - Twitch
+- Veoh
 
 ## Get geckodriver
 
