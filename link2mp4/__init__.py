@@ -1,7 +1,7 @@
 try:
-    from . import youtube, reddit, twitter, pinterest, tiktok, vimeo, twitch
+    from . import youtube, reddit, twitter, pinterest, tiktok, vimeo, twitch, veoh
 except ImportError:
-    import youtube, reddit, twitter, pinterest, tiktok, vimeo, twitch
+    import youtube, reddit, twitter, pinterest, tiktok, vimeo, twitch, veoh
 download_functions = {
     'YouTube': youtube.download,
     'Reddit': reddit.download,
@@ -9,5 +9,6 @@ download_functions = {
     'Pinterest': pinterest.download,
     'TikTok': tiktok.download,
     'Vimeo': vimeo.download,
-    'Twitch': twitch.download
+    'Twitch': twitch.download,
+    'Veoh': veoh.download,
 }
