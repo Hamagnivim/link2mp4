@@ -1,9 +1,9 @@
-from moviepy.editor import VideoFileClip, AudioFileClip
 from seleniumwire.webdriver import Firefox, Chrome, Edge, Safari
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from time import sleep
+from urllib3 import PoolManager
 DEBUG = False # change to make the browser visible for debugging
 Options = lambda: None # noqa
 browsers = {
@@ -37,6 +37,6 @@ def requests(url, click_on=None):
     return list(map(lambda req: req.url, requests))
 def video(video, audio=None):
     if audio is None:
-        return VideoFileClip(video)
+        return PoolManager().request('GET', video).data
     else:
-        return VideoFileClip(video).set_audio(AudioFileClip(audio))
+        return video, audio
