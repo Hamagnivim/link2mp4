@@ -24,7 +24,7 @@ def main():
                 remove(outname)
             except FileNotFoundError:
                 pass
-            ffmpeg.output(ffmpeg.input(video[0]), ffmpeg.input(video[1]), outname).run()
+            ffmpeg.output(ffmpeg.input(video[0]), ffmpeg.input(video[1]), outname).run(quiet=True)
     except KeyboardInterrupt:
         print('\nCancelled.')
 if __name__ == '__main__': main()
